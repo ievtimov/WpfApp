@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A0B7592-7B3E-4863-987A-9D668DC2E5CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp</RootNamespace>
+    <AssemblyName>WpfApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Binding examples\ChangeNotificationSample.xaml.cs">
+      <DependentUpon>ChangeNotificationSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Binding examples\ConverterSample.xaml.cs">
+      <DependentUpon>ConverterSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Binding examples\StringFormatSample.xaml.cs">
+      <DependentUpon>StringFormatSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CommandCanExecuteSample.xaml.cs">
+      <DependentUpon>CommandCanExecuteSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CommandsWithCommandTargetSample.xaml.cs">
+      <DependentUpon>CommandsWithCommandTargetSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CustomCommandSample.xaml.cs">
+      <DependentUpon>CustomCommandSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\UsingCommandsSample.xaml.cs">
+      <DependentUpon>UsingCommandsSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\CanvasSample.xaml.cs">
+      <DependentUpon>CanvasSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\CheckBoxSample.xaml.cs">
+      <DependentUpon>CheckBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\DockPanelSample.xaml.cs">
+      <DependentUpon>DockPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\ExceptionsSample.xaml.cs">
+      <DependentUpon>ExceptionsSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\GridSample.xaml.cs">
+      <DependentUpon>GridSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Binding examples\HelloBoundWorldSample.xaml.cs">
+      <DependentUpon>HelloBoundWorldSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\LabelControlSample.xaml.cs">
+      <DependentUpon>LabelControlSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\PasswordBoxSample.xaml.cs">
+      <DependentUpon>PasswordBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\RadioButtonSample.xaml.cs">
+      <DependentUpon>RadioButtonSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\ResourceSample.xaml.cs">
+      <DependentUpon>ResourceSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\StackPanelSample.xaml.cs">
+      <DependentUpon>StackPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\TextBlockInlineSample.xaml.cs">
+      <DependentUpon>TextBlockInlineSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\TextBlockSample.xaml.cs">
+      <DependentUpon>TextBlockSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\TextBoxSample.xaml.cs">
+      <DependentUpon>TextBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\TextFormattingModeSample.xaml.cs">
+      <DependentUpon>TextFormattingModeSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\ToolTipsSimpleSample.xaml.cs">
+      <DependentUpon>ToolTipsSimpleSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sample windows\WrapPanelSample.xaml.cs">
+      <DependentUpon>WrapPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\StyleTriggerEnterExitActions.xaml.cs">
+      <DependentUpon>StyleTriggerEnterExitActions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\ControlSpecificStyleSample.xaml.cs">
+      <DependentUpon>ControlSpecificStyleSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\ExplicitStyleSample.xaml.cs">
+      <DependentUpon>ExplicitStyleSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\SimpleStyleSample.xaml.cs">
+      <DependentUpon>SimpleStyleSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleDataTriggerSample.xaml.cs">
+      <DependentUpon>StyleDataTriggerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleEventTriggerSample.xaml.cs">
+      <DependentUpon>StyleEventTriggerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleMultiDataTriggerSample.xaml.cs">
+      <DependentUpon>StyleMultiDataTriggerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleMultiTriggerSample.xaml.cs">
+      <DependentUpon>StyleMultiTriggerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleTriggerEnterExitActions.xaml.cs">
+      <DependentUpon>StyleTriggerEnterExitActions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\StyleTriggersSample.xaml.cs">
+      <DependentUpon>StyleTriggersSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTutorialSamples\Styles\WindowWideStyleSample.xaml.cs">
+      <DependentUpon>WindowWideStyleSample.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Binding examples\ChangeNotificationSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Binding examples\ConverterSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Binding examples\StringFormatSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Commands\CommandCanExecuteSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Commands\CommandsWithCommandTargetSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Commands\CustomCommandSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Commands\UsingCommandsSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\CanvasSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\CheckBoxSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\DockPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\ExceptionsSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Sample windows\GridSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Binding examples\HelloBoundWorldSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\LabelControlSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\PasswordBoxSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\RadioButtonSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\ResourceSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\StackPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\TextBlockInlineSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\TextBlockSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\TextBoxSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\TextFormattingModeSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\ToolTipsSimpleSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sample windows\WrapPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\StyleTriggerEnterExitActions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\ControlSpecificStyleSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\ExplicitStyleSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\SimpleStyleSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleDataTriggerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleEventTriggerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleMultiDataTriggerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleMultiTriggerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleTriggerEnterExitActions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\StyleTriggersSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfTutorialSamples\Styles\WindowWideStyleSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WpfTutorialSamples\Images\accept.png" />
+    <Resource Include="WpfTutorialSamples\Images\application_form.png" />
+    <Resource Include="WpfTutorialSamples\Images\arrow_left.png" />
+    <Resource Include="WpfTutorialSamples\Images\arrow_right.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_blue.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_gray.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_green.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_orange.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_pink.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_purple.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_red.png" />
+    <Resource Include="WpfTutorialSamples\Images\bullet_yellow.png" />
+    <Resource Include="WpfTutorialSamples\Images\cancel.png" />
+    <Resource Include="WpfTutorialSamples\Images\control_pause_blue.png" />
+    <Resource Include="WpfTutorialSamples\Images\control_play_blue.png" />
+    <Resource Include="WpfTutorialSamples\Images\control_stop_blue.png" />
+    <Resource Include="WpfTutorialSamples\Images\copy.png" />
+    <Resource Include="WpfTutorialSamples\Images\cut.png" />
+    <Resource Include="WpfTutorialSamples\Images\disk.png" />
+    <Resource Include="WpfTutorialSamples\Images\earth.ico" />
+    <Resource Include="WpfTutorialSamples\Images\folder.png" />
+    <Resource Include="WpfTutorialSamples\Images\folder32.png" />
+    <Resource Include="WpfTutorialSamples\Images\group.png" />
+    <Resource Include="WpfTutorialSamples\Images\help.png" />
+    <Resource Include="WpfTutorialSamples\Images\page_white.png" />
+    <Resource Include="WpfTutorialSamples\Images\paste.png" />
+    <Resource Include="WpfTutorialSamples\Images\question.png" />
+    <Resource Include="WpfTutorialSamples\Images\question32.png" />
+    <Resource Include="WpfTutorialSamples\Images\refresh.png" />
+    <Resource Include="WpfTutorialSamples\Images\text_bold.png" />
+    <Resource Include="WpfTutorialSamples\Images\text_italic.png" />
+    <Resource Include="WpfTutorialSamples\Images\text_underline.png" />
+    <Resource Include="WpfTutorialSamples\Images\user.png" />
+    <Resource Include="WpfTutorialSamples\Images\world_go.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

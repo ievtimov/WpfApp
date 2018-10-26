@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="WPF Tutorial" Height="300" Width="420" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+            <TextBlock Margin="5" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">Select Sample:</TextBlock>
+        <ComboBox Margin="5" Grid.Row="1" Grid.Column="2" x:Name="cmbSamples" MinWidth="100" Height="25" VerticalAlignment="Center"
+                      Loaded="cmbSamples_Loaded" SelectionChanged="cmbSamples_SelectionChanged" Width="251">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        <TextBlock Margin="5" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">Select Other:</TextBlock>
+        <ComboBox Margin="5" Grid.Row="2" Grid.Column="2" x:Name="cmbOthers" MinWidth="100" Height="25" VerticalAlignment="Center"
+                      Loaded="cmbOthers_Loaded"  SelectionChanged="cmbOthers_SelectionChanged"  Width="251">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        <TextBlock Margin="5" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">Select Commands:</TextBlock>
+        <ComboBox Margin="5" Grid.Row="3" Grid.Column="2" x:Name="cmbCommands" MinWidth="100" Height="25" VerticalAlignment="Center"
+                      Loaded="cmbCommands_Loaded"  SelectionChanged="cmbCommands_SelectionChanged"  Width="251">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        <TextBlock Margin="5" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">Select Styles:</TextBlock>
+        <ComboBox Margin="5" Grid.Row="4" Grid.Column="2" x:Name="cmbStyles" MinWidth="100" Height="25" VerticalAlignment="Center"
+                      Loaded="cmbStyles_Loaded"  SelectionChanged="cmbStyles_SelectionChanged"  Width="251">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Title}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</Window>
